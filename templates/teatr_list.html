@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Teatrs List</title>
+</head>
+<body>
+    <h1>Teatri</h1>
+    <ul>
+        {% for teatr in teatri %}
+            <li>{{ teatr.name }} - {{ teatr.teatraddres }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+

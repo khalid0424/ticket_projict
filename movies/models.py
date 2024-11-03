@@ -7,7 +7,7 @@ class Movie(models.Model):
     tittle = models.CharField(max_length= 100)
     genr = models.CharField(max_length=56)
     publicdate = models.DateField()
-    teatr =models.CharField()
+    teatr =models.CharField(max_length=99)
     description = models.CharField(max_length=500)
     image_poster= models.ImageField(upload_to='static/images', blank=True)
     
@@ -25,8 +25,8 @@ class Teatr(models.Model):
 class Show(models.Model):
    movie = models.CharField(max_length=50)
    teatr = models.CharField(max_length=78)
-   date = models.DateField(db_default=0)
-   time = models.DateTimeField(auto_now=None)
+   date = models.DateField()
+   time = models.DateTimeField()
    trilevideo = models.FileField(upload_to='static/video', blank=True)
 
 

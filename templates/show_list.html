@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Shows List</title>
+</head>
+<body>
+    <h1>Shows</h1>
+    <ul>
+        {% for show in shows %}
+            <li>
+                <p>Movie: {{ show.movie }}</p>
+                <p>Theater: {{ show.teatr }}</p>
+                <p>Date: {{ show.date }}</p>
+                <p>Time: {{ show.time }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

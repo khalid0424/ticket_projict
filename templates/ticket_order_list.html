@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Ticket Orders List</title>
+</head>
+<body>
+    <h1>Ticket Orders</h1>
+    <ul>
+        {% for order in orders %}
+            <li>
+                <p>Order Date: {{ order.timeshow }}</p>
+                <p>Client Name: {{ order.name_kilent }}</p>
+                <p>Phone: {{ order.number_kilent }}</p>
+                <p>Amount: {{ order.ticket_summa }}</p>
+                <p>Payment Date: {{ order.data_payment }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

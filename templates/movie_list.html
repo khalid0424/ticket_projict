@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Movies List</title>
+</head>
+<body>
+    <h1>Movies</h1>
+    <ul>
+        {% for movie in movies %}
+            <li>
+                <a href="{% url 'movie_detail' movie.id %}">{{ movie.tittle }}</a>
+                <p>{{ movie.description }}</p>
+                <img src="{{ movie.image_poster.url }}" alt="{{ movie.tittle }}">
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
